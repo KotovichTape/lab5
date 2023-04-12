@@ -1,0 +1,47 @@
+﻿<Window x:Class="lab5.Cost"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab5"
+        mc:Ignorable="d"
+        Title="Cost" Height="450" Width="800">
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" >
+            <DataGrid x:Name="CostDataGrid" Background="Yellow"/>
+
+
+        </Grid>
+        <Grid Grid.RowSpan="2" Grid.Column="3" Background="Black">
+            <StackPanel VerticalAlignment="Bottom">
+
+                <Button Content="Аптеки" HorizontalAlignment="Right"  VerticalAlignment="Center" Grid.Column="0" Height="100" Width="100" Cursor="Hand"/>
+                <Button Content="Добавить"  VerticalAlignment="Bottom"   HorizontalAlignment="Right"  Height="100" Width="100" Cursor="Hand" Click="Button_Click_1" />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Background="Gray">
+            <StackPanel VerticalAlignment="Bottom">
+
+                <Button Content="Удалить" HorizontalAlignment="Left" Grid.Column="0" VerticalAlignment="Center" Height="100" Width="100" Cursor="Hand"/>
+                <Button Content="Изменить" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="1" Height="100" Width="100" Cursor="Hand"/>
+
+            </StackPanel>
+            <StackPanel>
+                <TextBox x:Name="CostTbx" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Введите стоимость лекарства" VerticalAlignment="Bottom" Width="120" Grid.Column="2" Grid.RowSpan="2"/>
+            </StackPanel>
+
+
+        </Grid>
+    </Grid>
+</Window>
